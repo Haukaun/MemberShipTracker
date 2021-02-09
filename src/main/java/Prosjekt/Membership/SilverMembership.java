@@ -1,4 +1,6 @@
-package Prosjekt;
+package Prosjekt.Membership;
+
+import Prosjekt.Membership.Membership;
 
 public class SilverMembership extends Membership {
     private final float POINTS_SCALING_FACTOR = (float) 1.2;

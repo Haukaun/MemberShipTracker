@@ -1,4 +1,4 @@
-package Prosjekt;
+package Prosjekt.Membership;
 
 public class GoldMembership extends Membership {
 
