@@ -14,6 +14,7 @@ public class BasicMembership extends Membership {
         return newPoints + bonusPointBalance;
     }
 
+
     @Override
     public String getMembershipname(){
         return "Basic";
