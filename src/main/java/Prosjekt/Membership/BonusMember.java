@@ -56,11 +56,19 @@ public class BonusMember {
         return password;
     }
 
+    /**
+     * Give you the local time date.
+     * @return
+     */
     public LocalDate getDate(){
         return LocalDate.now();
     }
 
-
+    /**
+     * Checks password if its written correctly.
+     * @param password Grabs the password and checks it.
+     * @return
+     */
     public boolean checkPassword(String password){
         boolean checkPassword = false;
 
@@ -70,11 +78,18 @@ public class BonusMember {
         return checkPassword;
     }
 
+    /**
+     * Takes old points and adds newpoints to the balance.
+     * @param newPoints Adds the number of points.
+     */
     public void registerBonusPoints(int newPoints){
         bonusPointsBalance = membership.registerPoints(this.bonusPointsBalance, newPoints);
         checkAndSetMembership();
     }
 
+    /**
+     * Checks point and which membership they belong too.
+     */
     public void checkAndSetMembership(){
             if(getBonusPointsBalance() < SILVER_LIMIT) {
                  this.membership = new BasicMembership();
@@ -91,6 +106,10 @@ public class BonusMember {
 
     }
 
+    /**
+     * Simpel Client setup that shows you how the program works.
+     * @param args
+     */
     public static void main(String[] args) {
         BonusMember bonusMember = new BonusMember(1, LocalDate.now(), 15000, "Håkon", "haakonfgs@hotmail.com");
         System.out.println("MemberNumber: " + bonusMember.getMemberNumber() + " | Membername: " + bonusMember.getName() +" | BonusPoints: " + bonusMember.getBonusPointsBalance() +" | Membership: " + bonusMember.getMembership() + " | Date: " + bonusMember.getDate());

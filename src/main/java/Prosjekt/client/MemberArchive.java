@@ -64,7 +64,10 @@ public class MemberArchive {
         return success;
     }
 
-
+    /**
+     * Displays one member.
+     * @param member Creates member object.
+     */
     public void DisplayMembers(BonusMember member){
         System.out.println("---------------------------------------------");
         System.out.println("Membernumber: " + member.getMemberNumber());
